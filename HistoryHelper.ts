@@ -26,7 +26,7 @@ export default class HistoryHelper {
   }
 
   mergeState(...state: object[]) {
-    const mergedState = merge({}, ...this.history.state[this.storeKey], ...state);
+    const mergedState = merge({}, this.history.state[this.storeKey], ...state);
     this.setState(mergedState);
   }
 

@@ -1,12 +1,10 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "outDir": "build",
     "module": "esnext",
     "target": "es5",
     "sourceMap": true,
     "allowJs": false,
-    "jsx": "react",
     "declaration": true,
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
