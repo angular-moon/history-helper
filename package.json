@@ -1,0 +1,37 @@
+{
+  "name": "history-helper",
+  "version": "1.0.0",
+  "repository": "https://github.com/angular-moon/history-helper.git",
+  "author": "angular-moon <xiaoxuss@163.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "pub": "yarn build && npm publish"
+  },
+  "peerDependencies": {
+    "lodash": "^4.17.13"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.13",
+    "rollup": "^0.62.0",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.24.0",
+    "typescript": "^3.6.2"
+  },
+  "files": [
+    "dist"
+  ]
+}
