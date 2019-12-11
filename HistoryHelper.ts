@@ -3,7 +3,9 @@ import { merge, get } from 'lodash';
 // eslint-disable-next-line no-restricted-globals
 const { history } = top;
 
-// 持久化搜索条件key前缀
+/**
+ * key前缀, 避免冲突
+ */
 const STORE_KEY_PREFIX = '__hh';
 
 export default class HistoryHelper {
@@ -26,7 +28,7 @@ export default class HistoryHelper {
   }
 
   mergeState(...state: object[]) {
-    const mergedState = merge({}, this.history.state[this.storeKey], ...state);
+    const mergedState = merge({}, this.getState(), ...state);
     this.setState(mergedState);
   }
 
