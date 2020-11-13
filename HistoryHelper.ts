@@ -1,7 +1,15 @@
 import { merge, get } from 'lodash';
 
-// eslint-disable-next-line no-restricted-globals
-const { history } = top;
+let history: History;
+
+/**
+ * 如果可以访问到顶层窗口, 默认为 top.history;
+ */
+try {
+  history = top.history;
+} catch (e) {
+  history = window.history;
+}
 
 /**
  * key前缀, 避免冲突
