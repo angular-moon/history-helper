@@ -36,8 +36,11 @@ export default class HistoryHelper {
   }
 
   mergeState(...state: object[]) {
-    const mergedState = merge({}, this.getState(), ...state);
-    this.setState(mergedState);
+    this.setState(merge({}, this.getState(), ...state));
+  }
+
+  shallowMergeState(...state: object[]) {
+    this.setState({ ...this.getState(), ...state });
   }
 
   clearState() {
