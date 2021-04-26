@@ -1,4 +1,4 @@
-import { merge, get } from 'lodash';
+import { merge, get, assign } from 'lodash';
 
 let history: History;
 
@@ -40,7 +40,7 @@ export default class HistoryHelper {
   }
 
   shallowMergeState(...state: object[]) {
-    this.setState({ ...this.getState(), ...state });
+    this.setState(assign({}, this.getState(), ...state));
   }
 
   clearState() {
