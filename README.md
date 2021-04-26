@@ -26,7 +26,11 @@ historyHelper.setState(state: any);
 
 historyHelper.getState()
 
+// deep merge, see: lodash.merge
 historyHelper.mergeState(...state: object[]);
+
+// shallow merge, use spread operator
+historyHelper.shallowMergeState(...state: object[]);
 
 historyHelper.clearState();
 
