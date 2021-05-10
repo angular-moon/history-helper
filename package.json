@@ -21,10 +21,10 @@
     "pub": "yarn build && npm publish"
   },
   "peerDependencies": {
-    "lodash": "^4.17.13"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "lodash": "^4.17.13",
+    "lodash": "^4.17.21",
     "rollup": "^0.62.0",
     "rollup-plugin-commonjs": "^9.1.3",
     "rollup-plugin-node-resolve": "^3.3.0",
